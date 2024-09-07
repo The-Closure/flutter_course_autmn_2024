@@ -136,9 +136,22 @@ void main(List<String> args) {
 
   print(products["products"]![0]["reviews"][0]["reviewerName"]);
 
-  Null addNumber({int x = 4}) {
-    print(x);
-  }
+  int result = addTwoNumber(20, 30);
+  print(result);
 
-  addNumber();
+  // ? Required and Optional Named Parametares
+  increamentNumber(theNumber: 30, theIncreament: 3);
+}
+
+int addTwoNumber(int firstNumber, int secondNumber) {
+  if (firstNumber > 10) {
+    print(firstNumber + secondNumber);
+    return 100;
+  } else {
+    return firstNumber + secondNumber;
+  }
+}
+
+void increamentNumber({required int theNumber, int theIncreament = 1}) {
+  print(theNumber + theIncreament);
 }
