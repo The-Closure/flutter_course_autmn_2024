@@ -1,35 +1,66 @@
-import 'animal.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+Function askQuestion = () {
+  return "Hello";
+};
 
-void main(List<String> args) {
-  B b = B();
-  b.hello();
-  
-  // Animal a = Animal(name: 'spike');
-  // a.setId = 1;
-  // print(a.id);
-  // print(a.name);
-  // Animal b = Animal(name: 'kitty');
-  // b.setId = 2;
-  // print(b.name);
-  // print(b.id);
-
-  Dog spike = Dog(name: "Spike");
-  spike.setId = 30;
-  print(spike.id);
-  spike.setColor = "blue";
-  print(spike.color);
-
-  Hasky h1 = Hasky(name: "new Haksy");
-  h1.bark();
-
-  Dog d1 = Hasky(name: "Complex Relation Dog");
-  // d1 as Hasky;
-  print(d1.runtimeType);
-  d1.bark();
-
-  Cat ketty = Cat(name: "Ketty");
-
-  printAsTheType(spike);
-  printAsTheType(ketty);
-  printAsTheType(d1);
+familyOfFuction(Function f1, String message) {
+  print(f1() + "---" + message);
 }
+
+class Animal {
+  String message;
+  String example;
+  Animal._({
+    required this.message,
+    required this.example,
+  });
+
+  static Animal animal =
+      Animal._(message: "New Message", example: "New Example");
+
+  static getInstance() {
+    return animal;
+  }
+}
+
+main() async {
+  Animal example1 = Animal.getInstance();
+
+  Animal example2 = Animal.getInstance();
+
+  if (example2 == example1) {
+    print("yes");
+  } else {
+    print("no");
+  }
+
+  
+  double result = 100 / 0;
+  print(result);
+
+  try {
+    print(example1.toString() as int);
+  } catch (e) {
+    print(e);
+  }
+
+  int counter = 20;
+  print(counter.toString());
+  // familyOfFuction(askQuestion, "New Message");
+
+  // var message = sayHello();
+  // print("object");
+  // print(await message);
+  // hellos("Don't");
+}
+
+Future<String> sayHello() async {
+  await Future.delayed(Duration(seconds: 3));
+  return "Hello From Future";
+}
+
+getHello(String name) {
+  print("Stolen Hello ${name}");
+}
+
+Function hellos = getHello;
