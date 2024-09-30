@@ -1,4 +1,3 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -51,14 +50,7 @@ class MyApp extends StatelessWidget {
             //     Colors.yellow,
             //   ],
             // ),
-            gradient: const SweepGradient(
-              startAngle: pi,
-              colors: [
-                Colors.brown,
-                Colors.pink,
-                Colors.yellow,
-              ],
-            ),
+           
 
             color: Colors.amber,
             // shape: BoxShape.circle,
