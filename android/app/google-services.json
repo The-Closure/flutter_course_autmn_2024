@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "797811277621",
+    "project_id": "autunm-2024",
+    "storage_bucket": "autunm-2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:797811277621:android:9323e717b3aeb87420d67c",
+        "android_client_info": {
+          "package_name": "com.example.firebase_session"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-m475WIS9StGpIONdnp3WRpeIiNutCvU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
